@@ -3,10 +3,15 @@ $(document).ready(function(){
 	optimizeLayout();
 
 
-	$('#detailed-view').beforeAfter();
+	$('#detailed-view').beforeAfter({
+		animateIntro : true,
+		introDelay : 2000,
+		introDuration : 300,
+		showFullLinks : false
+	});
 
 
-
+	
 
 	$(window).bind('scroll', function(e){
 		redrawDotNav();

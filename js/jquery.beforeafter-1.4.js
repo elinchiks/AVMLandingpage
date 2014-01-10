@@ -17,7 +17,7 @@
 				introDelay : 1000,
 				introDuration : 1000,
 				introPosition : .5,
-				showFullLinks : true,
+				showFullLinks : false,
 				beforeLinkText: 'Show only before',
 				afterLinkText: 'Show only after',
 				imagePath : './js/',

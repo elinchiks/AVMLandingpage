@@ -368,15 +368,17 @@ table {
 }
 @font-face {
   font-family: 'AVMMetaOT-Book';
-  font-style: normal;
+  src: url('../fonts/avmmetaot-book-webfont.eot');
+  src: url('../fonts/avmmetaot-book-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/avmmetaot-book-webfont.woff') format('woff'), url('../fonts/avmmetaot-book-webfont.ttf') format('truetype'), url('../fonts/avmmetaot-book-webfont.svg#avm_meta_otbook') format('svg');
   font-weight: normal;
-  src: url("../fonts/AVM-Meta-Opentype/AVMMetaOT-Book.otf") format("opentype");
+  font-style: normal;
 }
 @font-face {
   font-family: 'AVMMetaOT-CondBlack';
-  font-style: normal;
+  src: url('../fonts/avmmetaotcond-black-webfont.eot');
+  src: url('../fonts/avmmetaotcond-black-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/avmmetaotcond-black-webfont.woff') format('woff'), url('../fonts/avmmetaotcond-black-webfont.ttf') format('truetype'), url('../fonts/avmmetaotcond-black-webfont.svg#avm_meta_ot_condblack') format('svg');
   font-weight: normal;
-  src: url("../fonts/AVM-Meta-Opentype/AVMMetaOTCond-Black.otf") format("opentype");
+  font-style: normal;
 }
 @font-face {
   font-family: 'AVMMetaOT-CondMedium';
@@ -418,8 +420,12 @@ h4 {
 }
 h1 {
   font-size: 60px;
-  font-family: 'AVMMetaOT-CondBlack';
-  margin-top: 100px;
+  font-family: 'AVMMetaOT-CondBlack' !important;
+  text-transform: uppercase;
+  width: 810px;
+  max-width: 100% !important;
+  text-align: center;
+  margin: 70px auto 0;
 }
 h2 {
   font-size: 54px;
@@ -428,6 +434,7 @@ h2 {
 }
 h3 {
   font-size: 36px;
+  font-family: 'AVMMetaOT-CondBlack' !important;
 }
 h5 {
   font-size: 14px;
@@ -446,19 +453,19 @@ article {
   background: #026fb6;
   /* Old browsers */
 
-  background: -moz-radial-gradient(center, ellipse cover, #026fb6 0%, #002c5a 50%);
+  background: -moz-radial-gradient(top, ellipse cover, #026fb6 0%, #002c5a 50%);
   /* FF3.6+ */
 
-  background: -webkit-gradient(radial, center center, 0px, center center, 50%, color-stop(0%, #026fb6), color-stop(50%, #002c5a));
+  background: -webkit-gradient(radial, top center, 0px, top center, 50%, color-stop(0%, #026fb6), color-stop(50%, #002c5a));
   /* Chrome,Safari4+ */
 
-  background: -webkit-radial-gradient(center, ellipse cover, #026fb6 0%, #002c5a 50%);
+  background: -webkit-radial-gradient(top, ellipse cover, #026fb6 0%, #002c5a 50%);
   /* Chrome10+,Safari5.1+ */
 
-  background: -o-radial-gradient(center, ellipse cover, #026fb6 0%, #002c5a 50%);
+  background: -o-radial-gradient(top, ellipse cover, #026fb6 0%, #002c5a 50%);
   /* Opera 12+ */
 
-  background: -ms-radial-gradient(center, ellipse cover, #026fb6 0%, #002c5a 50%);
+  background: -ms-radial-gradient(top, ellipse cover, #026fb6 0%, #002c5a 50%);
   /* IE10+ */
 
   background: radial-gradient(ellipse at center, #026fb6 0%, #002c5a 50%);
@@ -482,11 +489,19 @@ li {
   text-align: center;
   font-size: 18px;
   font-family: 'AVMMetaOT-Book';
+  position: absolute;
+  bottom: 17.2%;
+  width: 730px;
+  max-width: 100%;
+  left: 50%;
+  margin-left: -365px;
 }
 .container {
-  width: 940px;
+  width: 100%;
   margin: 0 auto;
   z-index: 3;
+  text-align: center;
+  height: 100%;
 }
 nav#primary {
   z-index: 5;
@@ -534,15 +549,15 @@ nav#primary li.active h5 {
   background: transparent url('../images/avm.png') no-repeat center center;
   display: block;
   position: absolute;
-  top: 35px;
-  left: 40px;
   width: 48px;
   height: 26px;
+  bottom: 30px;
+  right: 35px;
 }
 .model-name {
   font-size: 14px;
   position: absolute;
-  right: 40px;
+  left: 40px;
   top: 45px;
   display: block;
   color: #fff;
@@ -579,8 +594,8 @@ nav#primary li.active h5 {
 }
 img#video {
   z-index: 1;
-  width: 800px;
-  height: 430px;
+  width: 940px;
+  height: auto;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -603,7 +618,7 @@ img#video {
 }
 #image-sequence {
   text-align: center;
-  margin-top: 230px;
+  margin-top: 100px;
 }
 article * {
   position: relative;
@@ -866,4 +881,36 @@ article.active .blue-bars b {
 }
 #detailed-view * {
   transition: none;
+}
+.fritz-badge {
+  display: block;
+  width: 160px;
+  height: 125px;
+  position: absolute;
+  background: transparent url('../images/badge.png') center center no-repeat;
+  top: 230px;
+  left: 10.4%;
+}
+.arrow-down {
+  width: 67px;
+  height: 33px;
+  background: transparent url('../images/arrow.png') center center no-repeat;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  margin-left: -16px;
+  display: block;
+}
+.block-list b {
+  display: block !important;
+  width: 60px;
+  height: 10px;
+  margin-bottom: 4px;
+}
+.block-list.blue-bars {
+  margin-right: 20px;
+  float: left;
+}
+.block-list.white-bars {
+  float: left;
 }
